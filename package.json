@@ -15,5 +15,18 @@
     "type": "git",
     "url": "https://github.com/Slyke/Javascript-UI-Engine-ngx-Wrapper.git"
   },
-
+  "dependencies": {
+    "js-ui-engine": "^1.7.3"
+  },
+  "devDependencies": {
+    "@angular/common": "^4.0.1",
+    "@angular/compiler": "^4.0.1",
+    "@angular/core": "^4.0.1",
+    "awesome-typescript-loader": "^3.1.2",
+    "rxjs": "^5.3.0",
+    "string-replace-loader": "^1.2.0",
+    "strip-sourcemap-loader": "0.0.1",
+    "webpack": "^2.3.3",
+    "zone.js": "^0.8.5"
+  }
 }
