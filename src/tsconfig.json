@@ -19,7 +19,7 @@
   },
   "files": [
     "index.ts",
-    "lib/js-ui-engine-wrapper.ts"
+    "lib/js-ui-engine-ngx-wrapper.ts"
   ],
   "angularCompilerOptions": {
     "skipMetadataEmit" : false,

@@ -1,3 +1,3 @@
 export {
   JSUIEngine
-} from './js-ui-engine-wrapper';
+} from './js-ui-engine-ngx-wrapper';

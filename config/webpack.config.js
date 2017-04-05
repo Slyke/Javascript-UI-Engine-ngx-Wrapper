@@ -15,7 +15,7 @@ var config = {
   output: {
     path: path.join(__dirname, '../bundles'),
     filename: '[name].js',
-    library: 'js-ui-engine-wrapper',
+    library: 'js-ui-engine-ngx-wrapper',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
