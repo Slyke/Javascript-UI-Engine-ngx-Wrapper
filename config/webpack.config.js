@@ -9,8 +9,8 @@ var config = {
     hints: false
   },
   entry: {
-    'js-ui-engine.umd': './src/index.ts',
-    'js-ui-engine.umd.min': './src/index.ts'
+    'js-ui-engine-ngx-wrapper.umd': './src/index.ts',
+    'js-ui-engine-ngx-wrapper.umd.min': './src/index.ts'
   },
   output: {
     path: path.join(__dirname, '../bundles'),

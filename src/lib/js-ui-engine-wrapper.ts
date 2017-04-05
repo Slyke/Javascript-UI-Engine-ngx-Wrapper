@@ -1,6 +1,6 @@
 
 
-export class JSUIEngineWrapper {
+export class JSUIEngine {
     constructor() {
         console.log("Works!");
     }

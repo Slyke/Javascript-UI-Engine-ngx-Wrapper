@@ -2,7 +2,7 @@
   "name": "js-ui-engine-ngx-wrapper",
   "version": "1.0.0",
   "description": "Javascript UI Engine Wrapper for Angular",
-  "main": "lib/js-ui-engine.js",
+  "main": "bundles/js-ui-engine-wrapper.umd.js",
   "author": "Slyke",
   "contributors": [
     "Steven Lawler (Slyke) <steven.lawler777@gmail.com>"

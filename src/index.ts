@@ -1,4 +1,4 @@
 export {
-    JSUIEngineWrapper
+    JSUIEngine
 } from './lib/index';
 
