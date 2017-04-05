@@ -1,7 +1,6 @@
 
 var webpack = require('webpack');
 var path = require('path');
-var outputFile = libraryName + '.js';
 
 var config = {
 
@@ -10,8 +9,8 @@ var config = {
     hints: false
   },
   entry: {
-    'js-ui-engine.umd': './src/js-ui-engine-wrapper.ts',
-    'js-ui-engine.umd.min': './lib/js-ui-engine-wrapper.ts'
+    'js-ui-engine.umd': './src/index.ts',
+    'js-ui-engine.umd.min': './src/index.ts'
   },
   output: {
     path: path.join(__dirname, '../bundles'),
