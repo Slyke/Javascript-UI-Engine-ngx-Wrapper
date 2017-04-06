@@ -19,9 +19,9 @@ export class JSUIEngine {
         "_version": () => { return this.jsuiEngine.debug._version; },
         "_wrapperVersion": _versionNumber,
         "setLevel": this.jsuiEngine.debug.setLevel,
-        "getLevel": this.jsuiEngine.debug._version,
-        "toggle": this.jsuiEngine.debug._version,
-        "getToggleConst": this.jsuiEngine.debug._version
+        "getLevel": this.jsuiEngine.debug.getLevel,
+        "toggle": this.jsuiEngine.debug.toggle,
+        "getToggleConst": this.jsuiEngine.debug.getToggleConst
     }
 
 
