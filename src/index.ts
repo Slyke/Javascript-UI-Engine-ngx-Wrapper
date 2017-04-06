@@ -1,4 +1,6 @@
 export {
-    JSUIEngine
+    JSUIEngine,
+    ObjectModel,
+    StyleModel
 } from './lib/index';
 

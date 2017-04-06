@@ -1,6 +1,6 @@
 {
   "name": "js-ui-engine-ngx-wrapper",
-  "version": "1.0.0",
+  "version": "1.20170405.1",
   "description": "Javascript UI Engine Wrapper for Angular",
   "main": "bundles/js-ui-engine-ngx-wrapper.umd.js",
   "module": "./dist/index.js",
@@ -15,7 +15,7 @@
     "url": "https://github.com/Slyke/Javascript-UI-Engine-ngx-Wrapper.git"
   },
   "dependencies": {
-    "js-ui-engine": "^1.7.3"
+    "js-ui-engine": "^1.7.4"
   },
   "scripts": {
     "init": "npm install",

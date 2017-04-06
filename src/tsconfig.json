@@ -19,7 +19,9 @@
   },
   "files": [
     "index.ts",
-    "lib/js-ui-engine-ngx-wrapper.ts"
+    "lib/js-ui-engine-ngx-wrapper.ts",
+    "lib/object.model.ts",
+    "lib/style.model.ts"
   ],
   "angularCompilerOptions": {
     "skipMetadataEmit" : false,
