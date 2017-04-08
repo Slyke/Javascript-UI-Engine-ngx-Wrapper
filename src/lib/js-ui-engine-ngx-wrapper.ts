@@ -2,7 +2,7 @@ import * as JSUI from 'js-ui-engine';
 import { ObjectModel } from './object.model';
 import { StyleModel } from './style.model';
 
-const _versionNumber: string = "1.20170405.1";
+const _versionNumber: string = "1.20170406.1";
 
 export class JSUIEngine {
 
