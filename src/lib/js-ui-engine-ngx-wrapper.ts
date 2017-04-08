@@ -6,35 +6,37 @@ const _versionNumber: string = "1.20170405.1";
 
 export class JSUIEngine {
 
-    private jsuiEngine = new JSUI();
+    private jsuiEngine: any;
 
-    public debug: {
-        _version: {},
-        _wrapperVersion: string,
-        setLevel: {},
-        getLevel: {},
-        toggle: {},
-        getToggleConst: {},
-    } = {
-        "_version": () => { return this.jsuiEngine.debug._version; },
-        "_wrapperVersion": _versionNumber,
-        "setLevel": this.jsuiEngine.debug.setLevel,
-        "getLevel": this.jsuiEngine.debug.getLevel,
-        "toggle": this.jsuiEngine.debug.toggle,
-        "getToggleConst": this.jsuiEngine.debug.getToggleConst
-    }
-
+    public canvasContext: any;
+    public canvasObject: any;
+    public canvasObjects: Array<{}> = [];
 
     constructor() {
         this.jsuiEngine = new JSUI();
-        
+    }
+
+    public debug(): any {
+        return {
+            "_version": () => { return this.jsuiEngine.debug._version; },
+            "_wrapperVersion": () => { return _versionNumber; },
+            "setLevel": this.jsuiEngine.debug.setLevel,
+            "getLevel": this.jsuiEngine.debug.getLevel,
+            "toggle": this.jsuiEngine.debug.toggle,
+            "getToggleConst": this.jsuiEngine.debug.getToggleConst
+        };
     }
 
     public setupCanvas(objCanvas: any, objectList?:Array<ObjectModel>, backgroundObject?: any): any {
-        return this.jsuiEngine.setupCanvas(objCanvas, objectList, backgroundObject);
+        objectList = (objectList ? objectList : this.canvasObjects);
+        this.canvasObject = objCanvas;
+        this.canvasContext = this.jsuiEngine.setupCanvas(this.canvasObject, objectList, backgroundObject);
+
+        return this.canvasContext;
     }
 
     public renderObjects(objectList?:Array<ObjectModel>):boolean {
+        objectList = (objectList ? objectList : this.canvasObjects);
         return this.jsuiEngine.renderObjects (objectList);
     }
 
@@ -63,14 +65,23 @@ export class JSUIEngine {
     }
 
     public clearCanvas(backgroundColor?: any, context?: any, transparentBackground?: any):void {
+        this.jsuiEngine.canvasObjects = this.canvasObjects;
         this.jsuiEngine.drawImage(backgroundColor, context, transparentBackground);
     }
 
+    public refreshScreen(transparentBackground?: any, context?: any, objectList?: any):void {
+        objectList = (objectList ? objectList : this.canvasObjects);
+        this.jsuiEngine.canvasObjects = this.canvasObjects;
+        this.jsuiEngine.refreshScreen(transparentBackground, context, objectList);
+    }
+
     public mouseEventHandler(e: any, eventType: any, objectList?:Array<ObjectModel>):void {
+        objectList = (objectList ? objectList : this.canvasObjects);
         this.jsuiEngine.mouseEventHandler(e, eventType, objectList);
     }
 
     public checkMouseCollision(mouseX: number, mouseY: number, objectList?:Array<ObjectModel>):void {
+        objectList = (objectList ? objectList : this.canvasObjects);
         this.jsuiEngine.mouseEventHandler(mouseX, mouseY, objectList);
     }
 
