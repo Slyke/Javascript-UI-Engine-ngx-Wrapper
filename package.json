@@ -15,7 +15,7 @@
     "url": "https://github.com/Slyke/Javascript-UI-Engine-ngx-Wrapper.git"
   },
   "dependencies": {
-    "js-ui-engine": "^1.20170407.6"
+    "js-ui-engine": "^1.20180114.8"
   },
   "scripts": {
     "init": "npm install",
